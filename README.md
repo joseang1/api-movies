@@ -1,6 +1,6 @@
 # API Movies
 
-API REST para la gestión de peliculas, géneros, actores y años de estreno, desarrollada con Spring Boot y JPA/Hibernate.
+API REST para la gestión de peliculas, géneros, actores y años de estreno, desarrollada con Spring Boot y JPA / Hibernate.
 
 Proyecto realizado para el ejercicio de P5 Digital Academy - Java Fundamentals / Spring Fundamentals.
 
@@ -52,13 +52,13 @@ cd movies-api
 ./mvnw spring-boot:run
 ```
 
-La aplicacion arrancara en `http://localhost:8080` con datos de prueba ya cargados (ver `src/main/resources/data.sql`).
+La aplicación arrancara en `http://localhost:8080` con datos de prueba ya cargados (ver `src/main/resources/data.sql`).
 
-La consola de H2 esta disponible en `http://localhost:8080/h2-console` con estos datos de conexion:
+La consola de H2 esta disponible en `http://localhost:8080/h2-console` con estos datos de conexión:
 
 - JDBC URL: `jdbc:h2:mem:moviesdb`
 - Usuario: `sa`
-- Contraseña: *(vacia)*
+- Contraseña: *(vacía)*
 
 ### Ejecutar con MySQL (via Docker)
 
@@ -67,7 +67,7 @@ La consola de H2 esta disponible en `http://localhost:8080/h2-console` con estos
 docker compose up -d
 ```
 
-2. Ejecutar la aplicacion con el perfil `mysql`:
+2. Ejecutar la aplicación con el perfil `mysql`:
 ```bash
 ./mvnw spring-boot:run -Dspring-boot.run.profiles=mysql
 ```
