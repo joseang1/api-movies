@@ -1,10 +1,10 @@
-# Api Movies
+# API Movies
 
-API REST para la gestion de peliculas, generos, actores y años de estreno, desarrollada con Spring Boot y JPA/Hibernate.
+API REST para la gestión de peliculas, géneros, actores y años de estreno, desarrollada con Spring Boot y JPA/Hibernate.
 
 Proyecto realizado para el ejercicio de P5 Digital Academy - Java Fundamentals / Spring Fundamentals.
 
-## Tecnologias
+## Tecnologías
 
 - Java 21
 - Spring Boot 4.1.1
@@ -18,20 +18,20 @@ Proyecto realizado para el ejercicio de P5 Digital Academy - Java Fundamentals /
 
 La API gestiona 4 entidades:
 
-- **Movie** (pelicula)
-- **Genre** (genero)
+- **Movie** (película)
+- **Genre** (género)
 - **Year** (año)
 - **Actor** (actor)
 
 ### Relaciones
 
-| Relacion | Tipo | Descripcion |
+| Relación | Tipo | Descripción |
 |---|---|---|
-| Movie - Genre | N:1 | Una pelicula pertenece a un genero; un genero agrupa varias peliculas |
-| Movie - Year | N:1 | Una pelicula se estrena en un año; un año agrupa varias peliculas |
-| Movie - Actor | N:M | Una pelicula tiene varios actores; un actor participa en varias peliculas |
+| Movie - Genre | N:1 | Una película pertenece a un género; un género agrupa varias películas |
+| Movie - Year | N:1 | Una película se estrena en un año; un año agrupa varias películas |
+| Movie - Actor | N:M | Una película tiene varios actores; un actor participa en varias películas |
 
-## Instalacion y puesta en marcha
+## Instalación y puesta en marcha
 
 ### Requisitos previos
 
@@ -72,18 +72,18 @@ docker compose up -d
 ./mvnw spring-boot:run -Dspring-boot.run.profiles=mysql
 ```
 
-## Documentacion de endpoints
+## Documentación de endpoints
 
 Prefijo base de todos los endpoints: `/api/v1/movies`
 
 | # | Metodo | Ruta | Descripción |
-| --- | --- | --- | --- | --- |
-| 1 | GET | `/api/v1/movies` | Obtener todas las peliculas |
-| 2 | GET | `/api/v1/movies/{id}` | Obtener una pelicula por su Id |
-| 3 | POST | `/api/v1/movies` | Añadir una nueva pelicula |
-| 4 | PUT | `/api/v1/movies/{id}` | Actualizar los datos de una pelicula |
-| 5 | DELETE | `/api/v1/movies/{id}` | Eliminar una pelicula |
-| 6 | GET | `/api/v1/movies/search?title=...` o `?genre=...` | Buscar peliculas por titulo o genero |
+| --- | --- | --- | --- |
+| 1 | GET | `/api/v1/movies` | Obtener todas las películas |
+| 2 | GET | `/api/v1/movies/{id}` | Obtener una película por su Id |
+| 3 | POST | `/api/v1/movies` | Añadir una nueva película |
+| 4 | PUT | `/api/v1/movies/{id}` | Actualizar los datos de una película |
+| 5 | DELETE | `/api/v1/movies/{id}` | Eliminar una película |
+| 6 | GET | `/api/v1/movies/search?title=...` o `?genre=...` | Buscar películas por título o género |
 
 ### Capturas de pantalla
 
@@ -142,11 +142,11 @@ Prefijo base de todos los endpoints: `/api/v1/movies`
 
 | Codigo | Cuando ocurre |
 |---|---|
-| `200 OK` | Peticion exitosa (GET, PUT) |
-| `201 Created` | Pelicula creada correctamente (POST) |
-| `204 No Content` | Pelicula eliminada correctamente (DELETE) |
-| `400 Bad Request` | Datos invalidos (validacion fallida, genero/año inexistente) |
-| `404 Not Found` | La pelicula solicitada no existe |
+| `200 OK` | Petición exitosa (GET, PUT) |
+| `201 Created` | Película creada correctamente (POST) |
+| `204 No Content` | Película eliminada correctamente (DELETE) |
+| `400 Bad Request` | Datos inválidos (validacion fallida, género/año inexistente) |
+| `404 Not Found` | La película solicitada no existe |
 
 ## Estructura del proyecto
 
