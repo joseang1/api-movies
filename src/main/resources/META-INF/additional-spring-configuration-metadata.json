@@ -1,0 +1,9 @@
+{
+  "properties": [
+    {
+      "name": "api-endpoint",
+      "type": "java.lang.String",
+      "description": "Prefijo base de la API, ej: api/v1"
+    }
+  ]
+}
