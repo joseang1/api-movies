@@ -31,6 +31,41 @@ La API gestiona 4 entidades:
 | Movie - Year | N:1 | Una película se estrena en un año; un año agrupa varias películas |
 | Movie - Actor | N:M | Una película tiene varios actores; un actor participa en varias películas |
 
+### Diagramas ER
+
+#### Diagrama de Chen
+
+![chen-diagram](./assets/img/chen-diagram.jpg)
+
+#### Diagrama de patas de gallo
+
+```mermaid
+erDiagram
+    GENRE ||--o{ MOVIE : classifies
+    YEAR ||--o{ MOVIE : releases
+    MOVIE }o--o{ ACTOR : features
+ 
+    GENRE {
+        long id PK
+        string name
+    }
+    YEAR {
+        long id PK
+        int value
+    }
+    MOVIE {
+        long id PK
+        string title
+        string synopsis
+        long genre_id FK
+        long year_id FK
+    }
+    ACTOR {
+        long id PK
+        string name
+    }
+```
+
 ## Instalación y puesta en marcha
 
 ### Requisitos previos
@@ -87,27 +122,27 @@ Prefijo base de todos los endpoints: `/api/v1/movies`
 
 ### Capturas de pantalla
 
-### 1. GET (`/api/v1/movies`)
+#### 1. GET (`/api/v1/movies`)
 
 ![get-all-movies](./assets/img/GET-all_SS.jpg)
 
-### 2. GET (`/api/v1/movies/{id}`)
+#### 2. GET (`/api/v1/movies/{id}`)
 
 ![get-movies-id](./assets/img/GET-id_SS.jpg)
 
-### 3. POST (`/api/v1/movies`)
+#### 3. POST (`/api/v1/movies`)
 
 ![add-movies](./assets/img/POST_SS.jpg)
 
-### 4. PUT (`/api/v1/movies/{id}`)
+#### 4. PUT (`/api/v1/movies/{id}`)
 
 ![update-movies](./assets/img/PUT_SS.jpg)
 
-### 5. DELETE (`/api/v1/movies/{id}`)
+#### 5. DELETE (`/api/v1/movies/{id}`)
 
 ![delete-movies](./assets/img/DELETE_SS.jpg)
 
-### 6. GET (`/api/v1/movies/search?genre=...` o `?title=...`)
+#### 6. GET (`/api/v1/movies/search?genre=...` o `?title=...`)
 
 ![get-movies-genre](./assets/img/GET-genre_SS.jpg)
 
